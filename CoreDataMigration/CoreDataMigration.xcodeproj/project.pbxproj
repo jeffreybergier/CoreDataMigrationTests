@@ -13,6 +13,7 @@
 		73DCB46D264407740082D955 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB46C264407740082D955 /* Stack.swift */; };
 		73DCB46F264408A80082D955 /* Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB46E264408A80082D955 /* Containers.swift */; };
 		73DCB4722644092E0082D955 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB4702644092E0082D955 /* Model.xcdatamodeld */; };
+		73DCB476264415950082D955 /* Example_v1.0.0.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 73DCB475264415950082D955 /* Example_v1.0.0.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		73DCB4712644092E0082D955 /* v1.0.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.0.0.xcdatamodel; sourceTree = "<group>"; };
 		73DCB473264410640082D955 /* v1.1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.1.0.xcdatamodel; sourceTree = "<group>"; };
 		73DCB474264411190082D955 /* v1.1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.1.2.xcdatamodel; sourceTree = "<group>"; };
+		73DCB475264415950082D955 /* Example_v1.0.0.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example_v1.0.0.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				73DCB460264407310082D955 /* CoreDataMigrationTests.swift */,
+				73DCB475264415950082D955 /* Example_v1.0.0.sqlite */,
 				73DCB462264407310082D955 /* Info.plist */,
 			);
 			path = CoreDataMigrationTests;
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73DCB476264415950082D955 /* Example_v1.0.0.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

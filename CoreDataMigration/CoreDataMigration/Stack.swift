@@ -35,6 +35,7 @@ public class Stack {
     private func create_v1_0_0() throws {
         let result = try self.fetchAll()
         guard result.isEmpty else { return }
+        NSLog("--- ERROR: This code should not be reached during normal testing ---")
         let context = self.container.viewContext
         let new = BasicEntity(context: context)
         new.setValue("A Known Value", forKey: "v1_0_0_name")
