@@ -14,6 +14,10 @@
 		73DCB46F264408A80082D955 /* Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB46E264408A80082D955 /* Containers.swift */; };
 		73DCB4722644092E0082D955 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB4702644092E0082D955 /* Model.xcdatamodeld */; };
 		73DCB476264415950082D955 /* Example_v1.0.0.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 73DCB475264415950082D955 /* Example_v1.0.0.sqlite */; };
+		73DCB47A264419CB0082D955 /* Example_v1.1.0.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 73DCB479264419CB0082D955 /* Example_v1.1.0.sqlite */; };
+		73DCB47C26441C7A0082D955 /* Example_v1.1.2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 73DCB47B26441C7A0082D955 /* Example_v1.1.2.sqlite */; };
+		73DCB47E26441CD60082D955 /* Example_v1.2.0.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 73DCB47D26441CD60082D955 /* Example_v1.2.0.sqlite */; };
+		73DCB48026441D210082D955 /* Example_v2.0.0.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 73DCB47F26441D210082D955 /* Example_v2.0.0.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,10 @@
 		73DCB475264415950082D955 /* Example_v1.0.0.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example_v1.0.0.sqlite; sourceTree = "<group>"; };
 		73DCB4772644185D0082D955 /* v1.2.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.2.0.xcdatamodel; sourceTree = "<group>"; };
 		73DCB4782644188F0082D955 /* v2.0.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v2.0.0.xcdatamodel; sourceTree = "<group>"; };
+		73DCB479264419CB0082D955 /* Example_v1.1.0.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example_v1.1.0.sqlite; sourceTree = "<group>"; };
+		73DCB47B26441C7A0082D955 /* Example_v1.1.2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example_v1.1.2.sqlite; sourceTree = "<group>"; };
+		73DCB47D26441CD60082D955 /* Example_v1.2.0.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example_v1.2.0.sqlite; sourceTree = "<group>"; };
+		73DCB47F26441D210082D955 /* Example_v2.0.0.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example_v2.0.0.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 			children = (
 				73DCB460264407310082D955 /* CoreDataMigrationTests.swift */,
 				73DCB475264415950082D955 /* Example_v1.0.0.sqlite */,
+				73DCB479264419CB0082D955 /* Example_v1.1.0.sqlite */,
+				73DCB47B26441C7A0082D955 /* Example_v1.1.2.sqlite */,
+				73DCB47D26441CD60082D955 /* Example_v1.2.0.sqlite */,
+				73DCB47F26441D210082D955 /* Example_v2.0.0.sqlite */,
 				73DCB462264407310082D955 /* Info.plist */,
 			);
 			path = CoreDataMigrationTests;
@@ -201,7 +213,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73DCB47C26441C7A0082D955 /* Example_v1.1.2.sqlite in Resources */,
+				73DCB47A264419CB0082D955 /* Example_v1.1.0.sqlite in Resources */,
+				73DCB47E26441CD60082D955 /* Example_v1.2.0.sqlite in Resources */,
 				73DCB476264415950082D955 /* Example_v1.0.0.sqlite in Resources */,
+				73DCB48026441D210082D955 /* Example_v2.0.0.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +506,7 @@
 				73DCB473264410640082D955 /* v1.1.0.xcdatamodel */,
 				73DCB4712644092E0082D955 /* v1.0.0.xcdatamodel */,
 			);
-			currentVersion = 73DCB4712644092E0082D955 /* v1.0.0.xcdatamodel */;
+			currentVersion = 73DCB4782644188F0082D955 /* v2.0.0.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

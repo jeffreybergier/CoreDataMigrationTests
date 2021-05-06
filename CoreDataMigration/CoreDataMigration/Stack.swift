@@ -23,7 +23,7 @@ public class Stack {
         }
         lock.wait()
         if let error = error { throw error }
-        try self.create_v1_0_0()
+        try self.create()
     }
     
     public func fetchAll() throws -> [BasicEntity] {
@@ -32,13 +32,13 @@ public class Stack {
         return try context.fetch(fetch)
     }
     
-    private func create_v1_0_0() throws {
+    private func create() throws {
         let result = try self.fetchAll()
         guard result.isEmpty else { return }
         NSLog("--- ERROR: This code should not be reached during normal testing ---")
         let context = self.container.viewContext
         let new = BasicEntity(context: context)
-        new.setValue("A Known Value", forKey: "v1_0_0_name")
+        new.setValue("A Known Value", forKey: "v2_0_0_name")
         try context.save()
     }
 }
