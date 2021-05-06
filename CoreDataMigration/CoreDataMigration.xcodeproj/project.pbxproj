@@ -10,6 +10,9 @@
 		73DCB45C264407310082D955 /* CoreDataMigration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DCB452264407310082D955 /* CoreDataMigration.framework */; };
 		73DCB461264407310082D955 /* CoreDataMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB460264407310082D955 /* CoreDataMigrationTests.swift */; };
 		73DCB463264407310082D955 /* CoreDataMigration.h in Headers */ = {isa = PBXBuildFile; fileRef = 73DCB455264407310082D955 /* CoreDataMigration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73DCB46D264407740082D955 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB46C264407740082D955 /* Stack.swift */; };
+		73DCB46F264408A80082D955 /* Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB46E264408A80082D955 /* Containers.swift */; };
+		73DCB4722644092E0082D955 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73DCB4702644092E0082D955 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		73DCB45B264407310082D955 /* CoreDataMigrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataMigrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DCB460264407310082D955 /* CoreDataMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMigrationTests.swift; sourceTree = "<group>"; };
 		73DCB462264407310082D955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73DCB46C264407740082D955 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		73DCB46E264408A80082D955 /* Containers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Containers.swift; sourceTree = "<group>"; };
+		73DCB4712644092E0082D955 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				73DCB455264407310082D955 /* CoreDataMigration.h */,
+				73DCB46C264407740082D955 /* Stack.swift */,
+				73DCB46E264408A80082D955 /* Containers.swift */,
+				73DCB4702644092E0082D955 /* Model.xcdatamodeld */,
 				73DCB456264407310082D955 /* Info.plist */,
 			);
 			path = CoreDataMigration;
@@ -147,6 +156,7 @@
 				TargetAttributes = {
 					73DCB451264407310082D955 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					73DCB45A264407310082D955 = {
 						CreatedOnToolsVersion = 12.5;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73DCB46D264407740082D955 /* Stack.swift in Sources */,
+				73DCB46F264408A80082D955 /* Containers.swift in Sources */,
+				73DCB4722644092E0082D955 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		73DCB467264407310082D955 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V6ESYGU6CV;
@@ -357,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.saturdayapps.CoreDataMigration;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +380,7 @@
 		73DCB468264407310082D955 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V6ESYGU6CV;
@@ -389,6 +405,7 @@
 		73DCB46A264407310082D955 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6ESYGU6CV;
 				INFOPLIST_FILE = CoreDataMigrationTests/Info.plist;
@@ -407,6 +424,7 @@
 		73DCB46B264407310082D955 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6ESYGU6CV;
 				INFOPLIST_FILE = CoreDataMigrationTests/Info.plist;
@@ -453,6 +471,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		73DCB4702644092E0082D955 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				73DCB4712644092E0082D955 /* Model.xcdatamodel */,
+			);
+			currentVersion = 73DCB4712644092E0082D955 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 73DCB449264407310082D955 /* Project object */;
 }
