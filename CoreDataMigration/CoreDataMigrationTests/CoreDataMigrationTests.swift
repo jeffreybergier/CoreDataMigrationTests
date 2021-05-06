@@ -6,28 +6,37 @@
 //
 
 import XCTest
-@testable import CoreDataMigration
+import CoreData
+import CoreDataMigration
 
-class CoreDataMigrationTests: XCTestCase {
-
+class PlainCoreDataMigrationTests: XCTestCase {
+    
+    let randomStoreURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+                            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+    var containerType: NSPersistentContainer.Type! { PlainContainer.self }
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        PlainContainer.storeURL = self.randomStoreURL
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        PlainContainer.storeURL = nil
+        try FileManager.default.removeItem(at: self.randomStoreURL)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLoad() throws {
+        _ = try Stack(self.containerType)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+}
 
+class CloudCoreDataMigrationTests: PlainCoreDataMigrationTests {
+    override var containerType: NSPersistentContainer.Type { CloudContainer.self }
+    override func setUpWithError() throws {
+        CloudContainer.storeURL = self.randomStoreURL
+    }
+    override func tearDownWithError() throws {
+        CloudContainer.storeURL = nil
+        try FileManager.default.removeItem(at: self.randomStoreURL)
+    }
 }
