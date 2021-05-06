@@ -34,7 +34,9 @@
 		73DCB462264407310082D955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73DCB46C264407740082D955 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		73DCB46E264408A80082D955 /* Containers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Containers.swift; sourceTree = "<group>"; };
-		73DCB4712644092E0082D955 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		73DCB4712644092E0082D955 /* v1.0.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.0.0.xcdatamodel; sourceTree = "<group>"; };
+		73DCB473264410640082D955 /* v1.1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.1.0.xcdatamodel; sourceTree = "<group>"; };
+		73DCB474264411190082D955 /* v1.1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.1.2.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,9 +478,11 @@
 		73DCB4702644092E0082D955 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				73DCB4712644092E0082D955 /* Model.xcdatamodel */,
+				73DCB474264411190082D955 /* v1.1.2.xcdatamodel */,
+				73DCB473264410640082D955 /* v1.1.0.xcdatamodel */,
+				73DCB4712644092E0082D955 /* v1.0.0.xcdatamodel */,
 			);
-			currentVersion = 73DCB4712644092E0082D955 /* Model.xcdatamodel */;
+			currentVersion = 73DCB4712644092E0082D955 /* v1.0.0.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
