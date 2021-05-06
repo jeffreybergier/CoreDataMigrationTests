@@ -25,7 +25,10 @@ class PlainCoreDataMigrationTests: XCTestCase {
     }
 
     func testLoad() throws {
-        _ = try Stack(self.containerType)
+        let stack = try Stack(self.containerType)
+        let results = try stack.fetchAll()
+        XCTAssertEqual(results.count, 1)
+        XCTAssertEqual(results[0].value(forKey: "v1_0_0_name") as? String, "A Known Value")
     }
 
 }

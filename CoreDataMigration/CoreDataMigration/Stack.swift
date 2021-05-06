@@ -21,8 +21,23 @@ public class Stack {
             error = e
             lock.signal()
         }
-        if let error = error { throw error }
         lock.wait()
+        if let error = error { throw error }
+        try self.create_v1_0_0()
     }
     
+    public func fetchAll() throws -> [BasicEntity] {
+        let fetch = NSFetchRequest<BasicEntity>(entityName: "BasicEntity")
+        let context = self.container.viewContext
+        return try context.fetch(fetch)
+    }
+    
+    private func create_v1_0_0() throws {
+        let result = try self.fetchAll()
+        guard result.isEmpty else { return }
+        let context = self.container.viewContext
+        let new = BasicEntity(context: context)
+        new.setValue("A Known Value", forKey: "v1_0_0_name")
+        try context.save()
+    }
 }
