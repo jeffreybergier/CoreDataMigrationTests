@@ -15,7 +15,6 @@ let Example_v1_1_0 = MyBundle.url(forResource: "Example_v1.1.0", withExtension: 
 let Example_v1_1_2 = MyBundle.url(forResource: "Example_v1.1.2", withExtension: ".sqlite")!
 let Example_v1_2_0 = MyBundle.url(forResource: "Example_v1.2.0", withExtension: ".sqlite")!
 let Example_v2_0_0 = MyBundle.url(forResource: "Example_v2.0.0", withExtension: ".sqlite")!
-let KeyToFetch = "v2_0_0_name"
 
 class AbstractCoreDataMigrationTests: XCTestCase {
     
@@ -41,7 +40,7 @@ class AbstractCoreDataMigrationTests: XCTestCase {
         let stack = try Stack(self.containerType)
         let results = try stack.fetchAll()
         XCTAssertEqual(results.count, 1)
-        XCTAssertEqual(results[0].value(forKey: KeyToFetch) as? String, "A Known Value")
+        XCTAssertEqual(results[0].value(forKey: Stack.currentDBKey) as? String, Stack.knownValue)
     }
     
     func testMigration_v1_1_0() throws {
@@ -49,7 +48,7 @@ class AbstractCoreDataMigrationTests: XCTestCase {
         let stack = try Stack(self.containerType)
         let results = try stack.fetchAll()
         XCTAssertEqual(results.count, 1)
-        XCTAssertEqual(results[0].value(forKey: KeyToFetch) as? String, "A Known Value")
+        XCTAssertEqual(results[0].value(forKey: Stack.currentDBKey) as? String, Stack.knownValue)
     }
     
     func testMigration_v1_1_2() throws {
@@ -57,7 +56,7 @@ class AbstractCoreDataMigrationTests: XCTestCase {
         let stack = try Stack(self.containerType)
         let results = try stack.fetchAll()
         XCTAssertEqual(results.count, 1)
-        XCTAssertEqual(results[0].value(forKey: KeyToFetch) as? String, "A Known Value")
+        XCTAssertEqual(results[0].value(forKey: Stack.currentDBKey) as? String, Stack.knownValue)
     }
     
     func testMigration_v1_2_0() throws {
@@ -65,7 +64,7 @@ class AbstractCoreDataMigrationTests: XCTestCase {
         let stack = try Stack(self.containerType)
         let results = try stack.fetchAll()
         XCTAssertEqual(results.count, 1)
-        XCTAssertEqual(results[0].value(forKey: KeyToFetch) as? String, "A Known Value")
+        XCTAssertEqual(results[0].value(forKey: Stack.currentDBKey) as? String, Stack.knownValue)
     }
     
     func testMigration_v2_0_0() throws {
@@ -73,7 +72,7 @@ class AbstractCoreDataMigrationTests: XCTestCase {
         let stack = try Stack(self.containerType)
         let results = try stack.fetchAll()
         XCTAssertEqual(results.count, 1)
-        XCTAssertEqual(results[0].value(forKey: KeyToFetch) as? String, "A Known Value")
+        XCTAssertEqual(results[0].value(forKey: Stack.currentDBKey) as? String, Stack.knownValue)
     }
 
 }

@@ -11,6 +11,9 @@ public class Stack {
     
     public let container: NSPersistentContainer
     
+    public static let currentDBKey = "v2_0_0_name"
+    public static let knownValue = "A Known Value"
+    
     public init(_ type: NSPersistentContainer.Type) throws {
         let momURL = Bundle(for: Stack.self).url(forResource: "Model", withExtension: "momd")!
         let mom = NSManagedObjectModel(contentsOf: momURL)!
@@ -23,7 +26,7 @@ public class Stack {
         }
         lock.wait()
         if let error = error { throw error }
-        try self.create()
+        // try self.create() // uncomment to create fake databases
     }
     
     public func fetchAll() throws -> [BasicEntity] {
@@ -38,7 +41,7 @@ public class Stack {
         NSLog("--- ERROR: This code should not be reached during normal testing ---")
         let context = self.container.viewContext
         let new = BasicEntity(context: context)
-        new.setValue("A Known Value", forKey: "v2_0_0_name")
+        new.setValue(Stack.knownValue, forKey: Stack.currentDBKey)
         try context.save()
     }
 }
