@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73DB5E77264632CE00B8FF96 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		73DCB452264407310082D955 /* CoreDataMigration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataMigration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DCB455264407310082D955 /* CoreDataMigration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataMigration.h; sourceTree = "<group>"; };
 		73DCB456264407310082D955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		73DCB448264407310082D955 = {
 			isa = PBXGroup;
 			children = (
+				73DB5E77264632CE00B8FF96 /* README.md */,
 				73DCB454264407310082D955 /* CoreDataMigration */,
 				73DCB45F264407310082D955 /* CoreDataMigrationTests */,
 				73DCB453264407310082D955 /* Products */,
